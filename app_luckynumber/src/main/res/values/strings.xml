@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">App_luckyNumber</string>
+    <string name="title">Lucky Number</string>
+    <string name="input_message">Input a number</string>
+    <string name="button_submit">Submit</string>
+    <string name="too_big">Too big</string>
+    <string name="too_small">Too small</string>
+    <string name="bingo">Bingo</string>
+    <string name="ok">OK</string>
+    <string name="replay">Replay</string>
+    <string name="exit">Exit</string>
+    <string name="cancel">Cancel</string>
+</resources>

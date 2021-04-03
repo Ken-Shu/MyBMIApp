@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AB猜數字</string>
+    <string name="fourNumber">任意四位數</string>
+    <string name="EditText">輸入不重複四位數</string>
+    <string name="Button">傳送</string>
+    <string name="TextAllView">歷史紀錄</string>
+</resources>

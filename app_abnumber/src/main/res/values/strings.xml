@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App_ABNumber</string>
+    <string name="fourNumber">4 digits Number</string>
+    <string name="EditText">ImputNumber</string>
+    <string name="Button">Send</string>
+    <string name="TextAllView">textallView</string>
+</resources>

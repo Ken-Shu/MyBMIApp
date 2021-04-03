@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BMI APP</string>
+    <string name="btn_name">Calc</string>
+    <string name="hint_height">Please input height</string>
+    <string name="hint_weight">Please input weight</string>
+
+    <string name="amount">Please input Amount</string>
+    <string name="foot">Please input Foot</string>
+    <string name="result_chicken_amount">0</string>>
+    <string name="result_rabbit_amount">0</string>>
+</resources>
