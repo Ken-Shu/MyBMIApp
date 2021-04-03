@@ -33,7 +33,7 @@ class UITest {
             )
             //按下 Submit button
             onView(ViewMatchers.withId(R.id.submitButton)).perform(click())
-            // 按下 Dizlog 上的確定
+            // 按下 Dialog 上的確定
             try {
                 onView(withText(R.string.ok))
                     .inRoot(isDialog())

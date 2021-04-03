@@ -3,5 +3,9 @@
     <string name="fourNumber">4 digits Number</string>
     <string name="EditText">ImputNumber</string>
     <string name="Button">Send</string>
-    <string name="TextAllView">textallView</string>
+    <string name="result">"  "</string>
+    <string name="pass">Congratulations</string>
+    <string name="ok">OK</string>
+    <string name="next">NEXT</string>
+    <string name="ab">ab</string>
 </resources>

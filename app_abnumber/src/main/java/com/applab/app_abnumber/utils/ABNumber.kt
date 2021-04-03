@@ -1,30 +1,63 @@
 package com.applab.app_abnumber.utils
 
+import java.util.*
+
 class ABNumber {
-private var ans  = ""
+
+    private var ans: String = ""
 
     fun setAns() {
-        val nums = "5842"
-        ans = nums
+        var r: Random = Random()
+        var nums: LinkedHashSet<String> = LinkedHashSet()
+        var num_size = 4
+        var count = 0
+        while (nums.size < num_size) {
+            var r_num = r.nextInt(9)
+            var n = r_num
+            nums.add(n.toString())
+            count++
+        }
+        ans += nums
     }
-    fun getresult(guess : String) : IntArray{
+
+    fun getans(): String {
+        val an = ans
+        return an
+    }
+
+    fun getresult(guess: String): IntArray {
         var a = 0
         var b = 0
-        for(i in ans.indices){
-            if(ans[i].toInt() == guess[i].toInt()){
-                a++
-            }
+//        for (i in 1..10 step 3){
+//            for (k in 0..3){
+//                if(ans[i].toInt() == guess[k].toInt()){
+//                    a++
+//                }
+//            }
+//        }
+
+        if (ans[1].toInt() == guess[0].toInt()) {
+            a++
         }
-        for (i in ans.indices){
-            for ( k in guess.indices){
-                if(ans[i].toInt() == guess[k].toInt()){
+        if ( ans[4].toInt() == guess[1].toInt()){
+            a++
+        }
+        if (ans[7].toInt() == guess[2].toInt() ){
+            a++
+        }
+        if ( ans[10].toInt() == guess[3].toInt()){
+            a++
+        }
+        for (i in 1..10 step 3) {
+            for (k in guess.indices) {
+                if (ans[i].toInt() == guess[k].toInt()) {
                     b++
                 }
             }
         }
         val result = IntArray(2)
         result[0] = a
-        result[1] = b-a
+        result[1] = b - a
         return result
     }
 }

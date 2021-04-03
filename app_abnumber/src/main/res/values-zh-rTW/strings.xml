@@ -4,5 +4,9 @@
     <string name="fourNumber">任意四位數</string>
     <string name="EditText">輸入不重複四位數</string>
     <string name="Button">傳送</string>
-    <string name="TextAllView">歷史紀錄</string>
+    <string name="result">"  "</string>
+    <string name="pass">恭喜通關</string>
+    <string name="ok">確定</string>
+    <string name="next">在一輪</string>
+    <string name="ab">ab</string>
 </resources>
