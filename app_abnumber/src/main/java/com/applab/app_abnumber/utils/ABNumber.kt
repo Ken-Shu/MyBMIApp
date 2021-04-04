@@ -28,26 +28,28 @@ class ABNumber {
     fun getresult(guess: String): IntArray {
         var a = 0
         var b = 0
-//        for (i in 1..10 step 3){
-//            for (k in 0..3){
-//                if(ans[i].toInt() == guess[k].toInt()){
-//                    a++
-//                }
-//            }
+        var guess_count = 0
+        var ans_number=1
+        while (ans_number < 11){
+            if(ans[ans_number].toInt() == guess[guess_count].toInt()){
+                a++
+                ans_number += 3
+                guess_count ++
+            }else{ans_number +=3
+                guess_count++}
+        }
+//        if (ans[1].toInt() == guess[0].toInt()) {
+//            a++
 //        }
-
-        if (ans[1].toInt() == guess[0].toInt()) {
-            a++
-        }
-        if ( ans[4].toInt() == guess[1].toInt()){
-            a++
-        }
-        if (ans[7].toInt() == guess[2].toInt() ){
-            a++
-        }
-        if ( ans[10].toInt() == guess[3].toInt()){
-            a++
-        }
+//        if ( ans[4].toInt() == guess[1].toInt()){
+//            a++
+//        }
+//        if (ans[7].toInt() == guess[2].toInt() ){
+//            a++
+//        }
+//        if ( ans[10].toInt() == guess[3].toInt()){
+//            a++
+//        }
         for (i in 1..10 step 3) {
             for (k in guess.indices) {
                 if (ans[i].toInt() == guess[k].toInt()) {
