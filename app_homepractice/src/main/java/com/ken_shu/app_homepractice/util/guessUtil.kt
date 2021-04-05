@@ -5,27 +5,32 @@ import java.util.*
 class guessUtil {
 
     private var ans: Int = 0
-
+    private var min = 0;
+    private var max = 100;
+    var r = Random().nextInt(100) + 1
     fun setnumber(): Int {
-        var r = Random().nextInt(100) + 1
+
         return ans + r
+    }
+    fun getnumber () : Int{
+        return setnumber()
     }
 
     fun getresult(guess: Int): String {
-        var min = 0;
-        var max = 100;
+    val err = "請重新輸入(0~100)"
         var a = setnumber()
         if (guess > max || guess < min) {
-            print("請重新輸入(0~100)")
+        return err
         } else {
             if (guess > a) {
                 max = guess
-            }
-            if (guess < a) {
-                min = guess
+            }else {
+                if (guess < a) {
+                    min = guess
+                }
             }
         }
-        var result = "${min.toString()} ~ ${max.toString()}}"
+        var result = "${min.toString()} ~ ${max.toString()}"
         return result
     }
 }

@@ -4,4 +4,6 @@
     <string name="minAndmax">Min_Max</string>
     <string name="guess">Input your GuessNumber</string>
     <string name="button">SEND</string>
+    <string name="pass">Congratulation</string>
+    <string name="OK">confirm</string>
 </resources>
