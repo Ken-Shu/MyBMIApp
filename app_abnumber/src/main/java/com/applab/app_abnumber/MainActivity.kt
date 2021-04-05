@@ -26,11 +26,12 @@ class MainActivity : AppCompatActivity() {
         val guess = inputNumber.text.toString()
         val result = ab.getresult(guess)
         Log.d(TAG, Arrays.toString(result))
-        //result 資料呈現
-        val log = "${result[0]} A ${result[1]} B "
-        //log 資料累計
+//        //result 資料呈現
+        val printAB = "${result[0]} A ${result[1]} B "
+        //印出答案
         abc.text = "${ab.getans()}"
-        resultLog.text = "${guess} ->$log \n${resultLog.text}"
+        //log 資料累計
+        resultLog.text = "${guess} ->$printAB \n${resultLog.text}"
         inputNumber.selectAll()
         if (result[0] == 4) {
             AlertDialog.Builder(this)
