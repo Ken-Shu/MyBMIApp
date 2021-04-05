@@ -8,7 +8,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import com.applab.app_abnumber.utils.ABNumber
-import kotlinx.android.synthetic.main.activity_main.*
+ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 

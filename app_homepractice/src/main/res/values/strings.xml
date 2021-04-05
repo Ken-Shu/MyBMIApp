@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">GuessNumber</string>
+    <string name="tiltle">Terminater</string>
+    <string name="minAndmax">Min_Max</string>
+    <string name="guess">Input your GuessNumber</string>
+    <string name="button">SEND</string>
+</resources>
