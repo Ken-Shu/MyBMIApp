@@ -1,3 +1,5 @@
+include ':app_exchange'
+include ':app_luckyindex'
 include ':app_homepractice'
 include ':app_abnumber'
 include ':app_luckynumber'

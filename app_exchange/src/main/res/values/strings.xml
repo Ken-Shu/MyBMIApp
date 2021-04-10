@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">App_Exchange</string>
+    <string name="title">Please Enter TWD</string>
+    <string name="input_twd">Input TWD</string>
+    <string name="button">SEND</string>
+    <string name="usd">USD</string>
+    <string name="getusd">00.00</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">匯兌</string>
+    <string name="title">台幣</string>
+    <string name="input_twd">請輸入台幣</string>
+    <string name="button">兌換</string>
+    <string name="usd">美元</string>
+    <string name="getusd">0</string>
+</resources>

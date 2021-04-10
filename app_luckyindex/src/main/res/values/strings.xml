@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App_luckyindex</string>
+    <string name="app_title">Please input a number</string>
+    <string name="app_hint">1~9</string>
+    <string name="app_submit">Submit</string>
+    <string name="app_result_title">Lucky Index</string>
+</resources>
