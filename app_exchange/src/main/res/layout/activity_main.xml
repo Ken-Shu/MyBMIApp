@@ -7,43 +7,51 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="208dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="124dp"
+        android:id="@+id/textView"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="@string/title"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:text="@string/app_title"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextNumberSigned"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginLeft="64dp"
-        android:layout_marginTop="96dp"
+        android:id="@+id/input_amount"
+        android:layout_width="305dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:gravity="center"
-        android:hint="@string/input_twd"
+        android:hint="@string/app_hint"
         android:inputType="numberSigned"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="207dp"
-        android:layout_height="262dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="40dp"
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="312dp"
+        android:layout_height="183dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="228dp"
+        android:onClick="onClick"
+        android:src="@android:drawable/btn_star_big_on"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberSigned"
-        app:srcCompat="@android:drawable/btn_star_big_on" />
+        app:layout_constraintTop_toBottomOf="@+id/input_amount"
+        tools:srcCompat="@drawable/money" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_amount" />
 </androidx.constraintlayout.widget.ConstraintLayout>

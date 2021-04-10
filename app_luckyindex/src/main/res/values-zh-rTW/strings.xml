@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">幸運數字</string>
-    <string name="app_result_title">幸運數字</string>
-    <string name="app_submit">傳送</string>
-    <string name="app_hint">1~9</string>
-    <string name="app_title">請輸入數字</string>
-</resources>
