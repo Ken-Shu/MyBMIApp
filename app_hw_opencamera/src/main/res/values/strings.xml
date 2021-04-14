@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">app_hw_openCamera</string>
+    <string name="title">Camera</string>
+    <string name="open">OpenCamera</string>
+</resources>

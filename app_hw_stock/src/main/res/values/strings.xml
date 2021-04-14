@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">app_hw_Stock</string>
+    <string name="title">StockNumber</string>
+    <string name="input">Please Input Stock Number</string>
+    <string name="button">Send</string>
+    <string name="stock_number">Stock Number</string>
+    <string name="stock_price">Stock Price</string>
+</resources>
