@@ -47,14 +47,17 @@
         android:hint="Input your score"
         android:textSize="30dp"
         android:id="@+id/et_score"
+        android:inputType="numberSigned"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <Button
+        android:id="@+id/button"
         android:text="ADD"
         android:textSize="30dp"
+        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
