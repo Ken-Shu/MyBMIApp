@@ -5,6 +5,9 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_add.*
+import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.item_main.view.*
+import java.sql.Time
 
 class AddActivity : AppCompatActivity() {
     var result_code = 101
@@ -33,4 +36,6 @@ class AddActivity : AppCompatActivity() {
         setResult(result_code, intent)
         finish() // 將 ResultActivity 畫面關閉
     }
+
+
 }

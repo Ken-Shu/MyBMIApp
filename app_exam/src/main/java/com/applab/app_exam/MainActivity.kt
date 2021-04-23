@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
@@ -13,6 +14,9 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.activity.result.contract.ActivityResultContracts
 import kotlinx.android.synthetic.main.content_main.*
+import kotlinx.android.synthetic.main.item_main.*
+import kotlinx.android.synthetic.main.item_main.view.*
+import java.util.stream.Stream
 
 //User data class包含 學生姓名 考試分數
 //data 會實作 toString
@@ -32,13 +36,14 @@ class MainActivity : AppCompatActivity() {
     )
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
         context = this
 
-        // FAB
+        // FAB 新增符號
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
             //        .setAction("Action", null).show()
@@ -52,9 +57,12 @@ class MainActivity : AppCompatActivity() {
         // 如果是自行創建的 item 就不用再前面加上 Android.
         val adapter = object : ArrayAdapter<User?>(
             context,
+            //取的 item_main 的text1 再把user 轉型成 data class User
             R.layout.item_main, //android.R.layout.simple_list_item_2,
             R.id.text1,
-            users as List<User?>) {
+            users as List<User?>)
+        //以下是複寫ArrayAdapter 類別內的getView方法
+        {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 val v = super.getView(position, convertView, parent)
                 val name = v.findViewById<View>(R.id.text1) as TextView
@@ -95,7 +103,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private val openResultActivityCustom =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+                result ->
             if (result.resultCode == 101) {
                 val name = result.data?.getStringExtra("name").toString()
                 val score = result.data?.getStringExtra("score").toString().toInt()
@@ -115,22 +124,31 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
+    //建立選單
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
+        //設置用哪個 menu檔最為選單
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    override fun onOptionsItemSelected(item: MenuItem) : Boolean{
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_exit -> true
-            R.id.action_sum -> true
-            R.id.action_avg -> true
-            else -> super.onOptionsItemSelected(item)
+        Log.d("MainActivity","getSumandAvg")
+       var id  : Int = item.itemId
+        if (id == R.id.action_avg){
+         Toast.makeText(this,"平均 : ${users.sumBy { it.score }/users.size }",Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this,"平均 : ${avg}" ,Toast.LENGTH_SHORT).show()
+            return true
+        }else if(id == R.id.action_exit){
+            finish()
+            return true
+        }else if (id == R.id.action_sum){
+            Toast.makeText(this,"總分 : ${users.sumBy { it.score }}", Toast.LENGTH_SHORT).show()
+            return true
         }
+        return super.onOptionsItemSelected(item)
     }
 }
