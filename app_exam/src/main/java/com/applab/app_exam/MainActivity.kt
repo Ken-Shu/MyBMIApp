@@ -71,7 +71,7 @@ class MainActivity : AppCompatActivity() {
                 score.text = getItem(position)?.score.toString()
                 if(getItem(position)?.score!! < 60) {
                     score.setTextColor(Color.RED)
-                }
+                }else score.setTextColor(Color.BLACK)
                 return v
             }
         }
