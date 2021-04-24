@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--在中間穿插一個終結點</LinearLayout 就可以在中間內在穿插 Layout-->
+    <!--下面的 match_parent 是對應到上層 match_parent  -->
+    <!--wrap_content 依據內容來決定Layout 大小 -->
+    <!--GridView numColumns 調整 列數 auto_fit 自動判斷手機大小來決定 -->
+    <include layout="@layout/title"/>
+
+    <!--tools:listitem = 把 layout itme 內的內容 丟進去 -->
+    <GridView
+        android:id="@+id/grid_view"
+        android:numColumns="auto_fit"
+        tools:listitem="@layout/item"
+        android:verticalSpacing="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

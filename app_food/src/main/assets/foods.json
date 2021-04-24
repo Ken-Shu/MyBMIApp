@@ -1,0 +1,65 @@
+[
+  {
+    "idName": "m1086", "name": "BLT安格斯黑牛堡", "price": 114, "spicy": false, "new": false
+  },
+  {
+    "idName": "m1087", "name": "雙牛起司黑堡", "price": 100, "spicy": false, "new": true
+  },
+  {
+    "idName": "m1088", "name": "蕈菇安格斯黑牛堡", "price": 124, "spicy": false, "new": false
+  },
+  {
+    "idName": "m1095", "name": "大麥克", "price": 80, "spicy": false, "new": false
+  },
+  {
+    "idName": "m1098", "name": "雙層牛肉吉事堡", "price": 70, "spicy": false, "new": false
+  },
+  {
+    "idName": "m1229", "name": "麥香魚", "price": 60, "spicy": false, "new": false
+  },
+  {
+    "idName": "m1542", "name": "薑燒豬肉長堡", "price": 84, "spicy": false, "new": false
+  },
+  {
+    "idName": "m31368", "name": "麥香雞", "price": 49, "spicy": false, "new": false
+  },
+  {
+    "idName": "m31371", "name": "麥克鷄塊6塊", "price": 64, "spicy": false, "new": false
+  },
+  {
+    "idName": "m31373", "name": "勁辣鷄腿堡", "price": 80, "spicy": true, "new": false
+  },
+  {
+    "idName": "m41320", "name": "BLT辣脆鷄腿堡", "price": 114, "spicy": true, "new": false
+  },
+  {
+    "idName": "m41322", "name": "嫩煎鷄腿堡", "price": 80, "spicy": false, "new": false
+  },
+  {
+    "idName": "m41328", "name": "麥脆鷄腿", "price": 55, "spicy": false, "new": false
+  },
+  {
+    "idName": "m41332", "name": "麥脆鷄翅", "price": 45, "spicy": false, "new": false
+  },
+  {
+    "idName": "m41334", "name": "BLT嫩煎鷄腿堡", "price": 114, "spicy": false, "new": false
+  },
+  {
+    "idName": "m41335", "name": "凱撒辣脆鷄沙拉", "price": 104, "spicy": false, "new": true
+  },
+  {
+    "idName": "m41336", "name": "義式烤鷄沙拉", "price": 104, "spicy": false, "new": false
+  },
+  {
+    "idName": "m41350", "name": "麥克鷄塊10塊", "price": 104, "spicy": false, "new": false
+  },
+  {
+    "idName": "m41364", "name": "煙燻鷄肉長堡", "price": 84, "spicy": false, "new": false
+  },
+  {
+    "idName": "m41365", "name": "脆鷄起司黑堡", "price": 100, "spicy": false, "new": true
+  },
+  {
+    "idName": "m41370", "name": "地中海辣鷄黑堡", "price": 100, "spicy": true, "new": true
+  }
+]

@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.applab.app_exam.MainActivity">
+    <!-- orderInCategory 排列(輸入數字來決定排列順數)數字大的在下方 -->
+    <!-- showAsAction 把按鍵擺在上方title (never)(always)(ifRoom空間夠的話才放入) -->
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="200"
+        android:title="@string/action_exit"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_sum"
+        android:orderInCategory="100"
+        android:title="@string/action_sum"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_avg"
+        android:orderInCategory="100"
+        android:title="@string/action_avg"
+        app:showAsAction="never" />
+
+</menu>

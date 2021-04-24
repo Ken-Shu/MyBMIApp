@@ -1,0 +1,38 @@
+[
+  {
+    "idName": "d1417", "name": "玉米湯", "price": 33, "new": false
+  },
+  {
+    "idName": "d3017", "name": "熱紅茶", "price": 33, "new": false
+  },
+  {
+    "idName": "d3032", "name": "熱奶茶", "price": 33, "new": false
+  },
+  {
+    "idName": "d3183", "name": "可口可樂", "price": 28, "new": false
+  },
+  {
+    "idName": "d3188", "name": "零卡可樂", "price": 28, "new": false
+  },
+  {
+    "idName": "d3193", "name": "雪碧", "price": 28, "new": false
+  },
+  {
+    "idName": "d33402", "name": "冰紅茶無糖", "price": 28, "new": false
+  },
+  {
+    "idName": "d33405", "name": "冰綠茶無糖", "price": 28, "new": false
+  },
+  {
+    "idName": "d33413", "name": "檸檬紅茶", "price": 28, "new": false
+  },
+  {
+    "idName": "d33429", "name": "冰奶茶", "price": 33, "new": false
+  },
+  {
+    "idName": "d33432", "name": "柳橙汁", "price": 40, "new": false
+  },
+  {
+    "idName": "d3508", "name": "鮮乳", "price": 28, "new": false
+  }
+]
