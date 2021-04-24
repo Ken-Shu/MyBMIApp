@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun service(name : String){
-          var json_foods = assets.open(name).bufferedReader().use { it.readText() }
+        var json_foods = assets.open(name).bufferedReader().use { it.readText() }
         //2 .json 字串 轉成 food 陣列 (List) 物件
         var foods = Gson().fromJson(json_foods, Array<Food>::class.java).toList()
         Log.d("MainActivity", json_foods)
