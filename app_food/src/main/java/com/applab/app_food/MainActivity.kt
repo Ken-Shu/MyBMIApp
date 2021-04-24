@@ -11,7 +11,14 @@ import android.view.ViewGroup
 import android.widget.*
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item.*
 import kotlinx.android.synthetic.main.title.*
+import kotlinx.android.synthetic.main.title.image_food
+import kotlinx.android.synthetic.main.title.image_new
+import kotlinx.android.synthetic.main.title.image_spicy
+import kotlinx.android.synthetic.main.title.text_name
+import kotlinx.android.synthetic.main.title.text_price
+import kotlinx.android.synthetic.main.title.view.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var context: Context
@@ -25,11 +32,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun service(name : String){
+        //讀出 name(json) 的資料
+        image_spicy.setImageResource(android.R.color.transparent)
+        image_new.setImageResource(android.R.color.transparent)
         var json_foods = assets.open(name).bufferedReader().use { it.readText() }
+
         //2 .json 字串 轉成 food 陣列 (List) 物件
         var foods = Gson().fromJson(json_foods, Array<Food>::class.java).toList()
         Log.d("MainActivity", json_foods)
         Log.d("MainActivity", foods.toString())
+
         //3.建立適配器 adapter 給 grid_view 使用 第三為資料儲存位子 第四為 資料來源
         val adapter = object : ArrayAdapter<Food>(context, R.layout.item, R.id.text_name, foods) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -38,23 +50,31 @@ class MainActivity : AppCompatActivity() {
                 val food = getItem(position) // 得到food 物件資料
                 //奶油刀 textName = v.text_name
                 val textName = v.findViewById<View>(R.id.text_name) as TextView
+                //把價錢寫進去textPrice裡面
                 val textPrice = v.findViewById<View>(R.id.text_price) as TextView
+                //把 image_food 寫進去 imageFood
                 val imageFood = v.findViewById<View>(R.id.image_food) as ImageView
+                //從食物(json檔內) 依據 idName 來從 drawable<-packageName 檔案內抓取
                 val imageFoodId = resources.getIdentifier(food?.idName, "drawable", packageName)
                 imageFood.setImageResource(imageFoodId)
+
+                //把抓到的 food.name 丟入 title 的 text_name
                 textName.text = food?.name
+                //把抓到的 food.price 丟入 title 的 text_price
                 textPrice.text = food?.price.toString()
 
+                //辣字樣
                 val imagespicy = v.findViewById<View>(R.id.image_spicy) as ImageView
-
+                //新字樣
                 val imagenew = v.findViewById<View>(R.id.image_new) as ImageView
-
+                //判斷食物是否有辣
                 if (food!!.spicy) {
                     imagespicy.setImageResource(R.drawable.isspicy)
                 } else {
                     //android.R.color.transparent 透明圖
                     imagespicy.setImageResource(android.R.color.transparent)
                 }
+                //判斷食物是否是新的
                 if (food.new) {
                     imagenew.setImageResource(R.drawable.isnew)
                 } else {
@@ -67,6 +87,7 @@ class MainActivity : AppCompatActivity() {
         //4 . 配置 adapter 給 grid_view
         grid_view.adapter = adapter
 
+
         //5 grid_vrew 配置監聽
         grid_view.onItemClickListener =
             AdapterView.OnItemClickListener { parent, view, position, id
@@ -75,6 +96,9 @@ class MainActivity : AppCompatActivity() {
                 //Toast.makeText(context,food.toString(),Toast.LENGTH_SHORT).show()
                 //取的圖檔名稱 名稱 "在哪個檔案"
                 val image_id = resources.getIdentifier(food.idName, "drawable", packageName)
+
+
+
                 //把抓取到的 impge_id 丟進去 image_food 裡面
                 image_food.setImageResource(image_id)
                 //把 food.name 丟進去 text_name 裡面

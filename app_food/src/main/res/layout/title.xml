@@ -55,13 +55,28 @@
                     android:layout_height="wrap_content"
                     android:text="麥當勞漢堡"
                     android:textSize="20dp" />
-
-                <TextView
-                    android:id="@+id/text_price"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="100"
-                    android:textSize="40dp" />
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/text_price"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textSize="40dp" />
+                    <TextView
+                        android:id="@+id/dollor"
+                        android:text="元"
+                        android:textSize="40dp"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+
 
             </LinearLayout>
             <Button

@@ -15,9 +15,9 @@
     <!--tools:listitem = 把 layout itme 內的內容 丟進去 -->
     <GridView
         android:id="@+id/grid_view"
-        android:numColumns="auto_fit"
-        tools:listitem="@layout/item"
-        android:verticalSpacing="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="20dp"
+        tools:listitem="@layout/item" />
 </LinearLayout>
