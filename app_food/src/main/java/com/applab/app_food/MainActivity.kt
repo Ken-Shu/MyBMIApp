@@ -12,7 +12,6 @@ import android.widget.*
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.title.*
-import java.util.stream.Stream
 
 class MainActivity : AppCompatActivity() {
     lateinit var context: Context
