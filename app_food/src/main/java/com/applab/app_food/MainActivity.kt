@@ -27,28 +27,31 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        image_spicy.setImageResource(android.R.color.transparent)
+        image_new.setImageResource(android.R.color.transparent)
         context = this
        service(foods)
     }
 
     fun service(name : String){
         //讀出 name(json) 的資料
-        image_spicy.setImageResource(android.R.color.transparent)
-        image_new.setImageResource(android.R.color.transparent)
-        var json_foods = assets.open(name).bufferedReader().use { it.readText() }
 
+        var json_foods = assets.open(name).bufferedReader().use { it.readText() }
         //2 .json 字串 轉成 food 陣列 (List) 物件
         var foods = Gson().fromJson(json_foods, Array<Food>::class.java).toList()
         Log.d("MainActivity", json_foods)
         Log.d("MainActivity", foods.toString())
 
-        //3.建立適配器 adapter 給 grid_view 使用 第三為資料儲存位子 第四為 資料來源
+
+
+        //3.建立適配器 adapter 給 grid_view 使用 第二為放置位置 第三為資料儲存位子 第四為 資料來源
         val adapter = object : ArrayAdapter<Food>(context, R.layout.item, R.id.text_name, foods) {
             override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
                 //這裡指的就是　R.layout.item 所配置的物件
                 val v = super.getView(position, convertView, parent)
                 val food = getItem(position) // 得到food 物件資料
                 //奶油刀 textName = v.text_name
+                //把View 內的 text_name 丟進去 textName 裡面
                 val textName = v.findViewById<View>(R.id.text_name) as TextView
                 //把價錢寫進去textPrice裡面
                 val textPrice = v.findViewById<View>(R.id.text_price) as TextView
@@ -56,17 +59,34 @@ class MainActivity : AppCompatActivity() {
                 val imageFood = v.findViewById<View>(R.id.image_food) as ImageView
                 //從食物(json檔內) 依據 idName 來從 drawable<-packageName 檔案內抓取
                 val imageFoodId = resources.getIdentifier(food?.idName, "drawable", packageName)
+
+                //辣字樣
+                val imagespicy = v.findViewById<View>(R.id.image_spicy) as ImageView
+                //新字樣
+                val imagenew = v.findViewById<View>(R.id.image_new) as ImageView
+
+                //此行是 根據每一個 food 內的 idName 把取得的資料放入每一個item 裡面
                 imageFood.setImageResource(imageFoodId)
+
+                //預設 title 的圖片
+                if(name.equals("foods.json")){
+                    image_food.setImageResource(imageFoodId)
+                    text_price.text=food?.price.toString()
+                    text_name.text=food?.name.toString()
+                } else if(name.equals("drinks.json")){
+                    image_food.setImageResource(imageFoodId)
+                    text_price.text=food?.price.toString()
+                    text_name.text=food?.name.toString()
+                }
+
+
 
                 //把抓到的 food.name 丟入 title 的 text_name
                 textName.text = food?.name
                 //把抓到的 food.price 丟入 title 的 text_price
                 textPrice.text = food?.price.toString()
 
-                //辣字樣
-                val imagespicy = v.findViewById<View>(R.id.image_spicy) as ImageView
-                //新字樣
-                val imagenew = v.findViewById<View>(R.id.image_new) as ImageView
+
                 //判斷食物是否有辣
                 if (food!!.spicy) {
                     imagespicy.setImageResource(R.drawable.isspicy)
