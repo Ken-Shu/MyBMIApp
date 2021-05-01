@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+<!--(mazLines 約束顯示行數) (ellipsize 省略號顯示位置) (layout_weight 設定比例) -->
+    <TextView
+        android:id="@+id/text_parkName"
+        android:text="停車場名"
+        android:textSize="20dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/text_surplusSpace"
+        android:text="剩餘空位"
+        android:textSize="20dp"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/text_totalSpace"
+        android:text="總停車位"
+        android:textSize="20dp"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

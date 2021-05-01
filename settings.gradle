@@ -1,3 +1,5 @@
+include ':app_parking'
+include ':app_recycler'
 include ':app_food'
 include ':app_circle'
 include ':app_exam'
