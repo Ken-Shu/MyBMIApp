@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
             //使用NavigationUI 更新界面組件
             NavigationUI.onNavDestinationSelected(it,navController)
             // 點選時收起選單
-            //drawer_layout.closeDrawer(GravityCompat.START)
+            drawer_layout.closeDrawer(GravityCompat.START)
             true
         }
 
