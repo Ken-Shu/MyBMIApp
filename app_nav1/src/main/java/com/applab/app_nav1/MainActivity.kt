@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
 import androidx.navigation.NavHostController
@@ -52,7 +53,12 @@ class MainActivity : AppCompatActivity() {
             if(it.itemId == R.id.item_exit){
                 finish()
                 true
-            }else false
+            }
+            //使用NavigationUI 更新界面組件
+            NavigationUI.onNavDestinationSelected(it,navController)
+            // 點選時收起選單
+            //drawer_layout.closeDrawer(GravityCompat.START)
+            true
         }
 
 //        nav_view.setNavigationItemSelectedListener(object: NavigationView.OnNavigationItemSelectedListener {
@@ -96,7 +102,7 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.options_menu,menu)
         return true
     }
-    fun onClick(item: MenuItem){
-        finish()
-    }
+//    fun onClick(item: MenuItem){
+//        finish()
+//    }
 }
