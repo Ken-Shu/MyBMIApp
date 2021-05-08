@@ -46,13 +46,14 @@ class MainActivity : AppCompatActivity() {
 
         //Drawer menu 的配置
         nav_view.setupWithNavController(navController)
-        //建立監聽器 Exit 的方法
-       nav_view.setNavigationItemSelectedListener {
-           if(it.itemId == R.id.item_exit){
-               finish()
-               true
-           }else false
-       }
+
+//        //建立監聽器 Exit 的方法
+//        nav_view.setNavigationItemSelectedListener {
+//            if(it.itemId == R.id.item_exit){
+//                finish()
+//                true
+//            }else false
+//        }
 
 //        nav_view.setNavigationItemSelectedListener(object: NavigationView.OnNavigationItemSelectedListener {
 //            override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -86,11 +87,15 @@ class MainActivity : AppCompatActivity() {
             navController.navigate(action)
             return true
         }
+
         return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.options_menu,menu)
         return true
+    }
+    fun onClick(item: MenuItem){
+        finish()
     }
 }
