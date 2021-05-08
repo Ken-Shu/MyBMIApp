@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_info"
+        android:title="Info"/>
+
+    <!--加入android:menuCategory="secondary"
+     讓按下 <- 會回到前一頁 否則都會回到首頁-->
+    <item
+        android:id="@+id/settingsFragment"
+        android:menuCategory="secondary"
+        android:title="Settings"/>
+
+</menu>
