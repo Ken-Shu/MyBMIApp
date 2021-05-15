@@ -13,4 +13,5 @@
         android:id="@+id/item_exit"
         android:icon="@drawable/ic_exit"
         android:title="Exit"/>
+        <!--android:onClick="onClick"-->
 </menu>
