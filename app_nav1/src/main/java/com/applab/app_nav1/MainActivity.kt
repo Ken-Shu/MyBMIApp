@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.view.GravityCompat
 import androidx.navigation.NavController
 import androidx.navigation.NavDirections
 import androidx.navigation.NavHostController
@@ -51,7 +52,10 @@ class MainActivity : AppCompatActivity() {
            if(it.itemId == R.id.item_exit){
                finish()
                true
-           }else false
+           }else
+               NavigationUI.onNavDestinationSelected(it ,navController)
+               drawer_layout.closeDrawer(GravityCompat.START)
+               false
        }
 
 //        nav_view.setNavigationItemSelectedListener(object: NavigationView.OnNavigationItemSelectedListener {

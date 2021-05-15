@@ -1,3 +1,5 @@
+include ':app_sqlite_lucky'
+include ':app_sqlite'
 include ':app_nav1'
 include ':app_parking'
 include ':app_recycler'
