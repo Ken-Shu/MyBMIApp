@@ -24,6 +24,8 @@
             <option value="$PROJECT_DIR$/app_nav1" />
             <option value="$PROJECT_DIR$/app_parking" />
             <option value="$PROJECT_DIR$/app_recycler" />
+            <option value="$PROJECT_DIR$/app_room" />
+            <option value="$PROJECT_DIR$/app_room2" />
             <option value="$PROJECT_DIR$/app_sqlite" />
             <option value="$PROJECT_DIR$/app_sqlite_lucky" />
           </set>
